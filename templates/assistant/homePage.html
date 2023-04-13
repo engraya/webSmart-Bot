@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <style>
+    #hero{
+        height: 650px;
+    }
+    #pic{
+        height: 600px;
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="{% url 'homePage' %}">Web Smart<span>Bot.</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="{% url 'homePage' %}">HomePage</a></li>
+            <li><a class="nav-link scrollto" href="#about">About Open AI</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="getstarted " href="{% url 'home' %}">Bot Page</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row d-flex align-items-center"">
+      <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
+        <h1>Explore new Tech Experience with web smart Bot </h1>
+        <h2>A tool with Open AI API Enhancement</h2>
+        <h2>Get the response of every request </h2>
+        <a href="{% url 'home' %}" class="btn-get-started scrollto">Get Started</a>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+        <img id="pic" src="{% static 'img/pic.jpg' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="image col-xl-5"></div>
+          <div class="col-xl-7">
+            <div class="content d-flex flex-column justify-content-center ps-0 ps-xl-4">
+              <h3 data-aos="fade-in" data-aos-delay="100">OPEN AI Overview</h3>
+              <p data-aos="fade-in">
+                The OpenAI API can be applied to virtually any task that involves understanding or generating natural language, code, or images. We offer a spectrum of models with different levels of power suitable for different tasks, as well as the ability to fine-tune your own custom models. These models can be used for everything from content generation to semantic search and classification.
+              </p>
+              <br>
+              <P>This web Applications uses the concept of Open AI API to render every request a user make into the app form and renders it as a response as a text</P>
+
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">Power of Open AI</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 d-flex" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/chat.jpg' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Chat Completion</a></h5>
+                <p class="card-text">Chat models take a series of messages as input, and return a model-generated message as output.
+
+                    Although the chat format is designed to make multi-turn conversations easy, it’s just as useful for single-turn tasks without any conversations (such as those previously served by instruction following models like text-davinci-003).</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/chat"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+        </div>
+          <div class="col-md-6 d-flex" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/text.jpg' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Text Completion</a></h5>
+                <p class="card-text">The completions endpoint can be used for a wide variety of tasks. It provides a simple but powerful interface to any of our models. You input some text as a prompt, and the model will generate a text completion that attempts to match whatever context or pattern you gave it. For example, if you give the API the prompt, "As Descartes said, I think, therefore", it will return the completion " I am" with high probability.</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/completion"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/embeddings.jpg' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Embeddings</a></h5>
+                <p class="card-text">An embedding is a vector (list) of floating point numbers. The distance between two vectors measures their relatedness. Small distances suggest high relatedness and large distances suggest low relatedness.</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/embeddings"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/speech2.png' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Speech to Text</a></h5>
+                <p class="card-text">The speech to text API provides two endpoints, transcriptions and translations, based on our state-of-the-art open source large-v2 Whisper model. They can be used to Transcribe audio into whatever language the audio is in, Translate and transcribe the audio into english.</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/speech-to-text"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/image.png' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Image Generation</a></h5>
+                <p class="card-text">Creating images from scratch based on a text prompt, Creating edits of an existing image based on a new text prompt, Creating variations of an existing image</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/images"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'img/finetuning.png' %}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Fine-tuning</a></h5>
+                <p class="card-text">Fine-tuning lets you get more out of the models available through the API by providing: Higher quality results than prompt design, Ability to train on more examples than can fit in a prompt, Token savings due to shorter prompts, Lower latency requests</p>
+                <div class="read-more"><a href="https://platform.openai.com/docs/guides/fine-tuning"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box" data-aos="fade-up">
+                  <i class="bx bx-map"></i>
+                  <h3>Address</h3>
+                  <p>Sabon Gari Kanuri ward, Nguru Yobe State Nigeria</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Me</h3>
+                  <p>engrahmadaya@gmail.com<br>ahmadyakubuaya@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Me</h3>
+                  <p>+2348149087802<br>+2348098214026</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>webSmart Bot</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/ -->
+        Designed by <a href="#">AHMAD YAKUBU AHMAD</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
